@@ -1,0 +1,3 @@
+recursive-include PubBCRPredictor/model/prediction *
+recursive-include example *
+include requirements.txt
