@@ -13,14 +13,22 @@ The public antibody prediction module leverages the pre-trained **BCR-V-BERT** m
 ## Setup
 
 ### Python Dependency
+> :warning:  **BCR-V-BERT is required**  :warning:
+
 The public antibody prediction module depends on the **BCR-V-BERT** Python package. Before running predictions, you need to install the required Python environment and dependencies as described in the [BCR-V-BERT README](https://github.com/ZhangLabTJU/BCR-V-BERT).
 
 ### Installation
  
 To download our code, we recommend creating a clean conda environment with python v3.9, and you will also need to install PyTorch v2.0.0.
+```bash
+conda create --name public-env python=3.9
+conda activate public-env
+```
 
 To use PubBCRPredictor, install via pip:
 ```bash
+git clone https://user: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@github.com/ZhangLabTJU/PubBCRPredictor.git
+cd PubBCRPredictor
 python setup.py install
 ```
 
