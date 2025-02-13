@@ -92,6 +92,9 @@ feature = BCR_V_BERT.embed(([cdrh1_seq+'|'+cdrh2_seq+'|'+cdrh3_seq],[vgene]))
 prob = public_runner.predict(feature)
 ```
 
+### Testing All Models
+If you want to test all models, please refer to the [example notebook](https://github.com/ZhangLabTJU/PubBCRPredictor/blob/main/example/example.ipynb).
+
 ***Sample Data***
 Sample datasets for testing the public antibody prediction module are available in the example_paired folder. These datasets include required columns such as cdr1, cdr2, cdr3, and v_gene for both heavy and light chain antibodies.
 
