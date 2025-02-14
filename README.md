@@ -1,21 +1,18 @@
 # PubBCRPredictor
 
-## License
-
-Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) (see License file).
-This software is not to be used for commerical purposes.
-
-Commercial users/for profit organisations can obtain a license from Cambridge Enterprise.
-
 ## Overview
 The public antibody prediction module leverages the pre-trained **BCR-V-BERT** model to classi-fy heavy chain antibodies (binary classification) and predict light chain antibodies (regression). This feature allows for the identification of public antibodies using advanced transformer-based sequence analysis.
+
+## License
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) (see License file).
+This software is not to be used for commercial purposes.
 
 ## Setup
 
 ### Python Dependency
 > :warning:  **BCR-V-BERT is required**  :warning:
 
-The public antibody prediction module depends on the **BCR-V-BERT** Python package. Before running predictions, you need to install the required Python environment and dependencies as described in the [BCR-V-BERT README](https://github.com/ZhangLabTJU/BCR-V-BERT).
+The public antibody prediction module depends on the **BCR-V-BERT** Python package. Before running predictions, you need to install the required Python environment and dependencies as described in the [BCR-V-BERT](https://github.com/ZhangLabTJU/BCR-V-BERT).
 
 ### Installation
  
@@ -25,7 +22,7 @@ conda create --name public-env python=3.9
 conda activate public-env
 ```
 
-To use PubBCRPredictor, install via pip:
+To use PubBCRPredictor, install via github:
 ```bash
 git clone https://user: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@github.com/ZhangLabTJU/PubBCRPredictor.git
 cd PubBCRPredictor
@@ -100,9 +97,6 @@ Sample datasets for testing the public antibody prediction module are available 
 
 For detailed information about the BCR-V-BERT Python package and its capabilities, please refer to the [BCR-V-BERT README](https://github.com/ZhangLabTJU/BCR-V-BERT).
 
-## Contact
-
-Please contact jian_zhang@tju.edu.cn to report issues of for any questions.
 
 ## Acknowledgements
 
