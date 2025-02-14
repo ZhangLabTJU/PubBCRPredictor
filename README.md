@@ -1,7 +1,7 @@
 # PubBCRPredictor
 
 ## Overview
-The public antibody prediction module leverages the pre-trained **BCR-V-BERT** model to classi-fy heavy chain antibodies (binary classification) and predict light chain antibodies (regression). This feature allows for the identification of public antibodies using advanced transformer-based sequence analysis.
+The public antibody prediction module leverages the pre-trained **BCR-V-BERT** model to classify heavy chain antibodies (binary classification) and predict light chain antibodies (regression). This feature allows for the identification of public antibodies using advanced transformer-based sequence analysis.
 
 ## License
 Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) (see License file).
