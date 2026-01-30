@@ -24,7 +24,7 @@ conda activate public-env
 
 To use PubBCRp, install via github:
 ```bash
-git clone https://user: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@github.com/ZhangLabTJU/PubBCRp.git
+git clone https://user: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@github.com/ZhangLabTJU/PubBCRPredictor.git
 cd PubBCRp
 pip install -r requirements.txt
 python setup.py install
@@ -91,7 +91,7 @@ prob = public_runner.predict(feature)
 ```
 
 ### Testing All Models
-If you want to test all models, please refer to the [example notebook](https://github.com/ZhangLabTJU/PubBCRp/blob/main/example/example.ipynb).
+If you want to test all models, please refer to the [example notebook](https://github.com/ZhangLabTJU/PubBCRPredictor/blob/main/example/example.ipynb).
 
 ***Sample Data***
 Sample datasets for testing the public antibody prediction module are available in the example_paired folder. These datasets include required columns such as cdr1, cdr2, cdr3, and v_gene for both heavy and light chain antibodies.
