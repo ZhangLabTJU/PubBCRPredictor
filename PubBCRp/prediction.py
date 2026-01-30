@@ -10,8 +10,8 @@ from sklearn.metrics import roc_curve, auc, confusion_matrix, precision_score, r
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, mean_absolute_percentage_error
 
 
-import PubBCRPredictor
-project_path = os.path.dirname(os.path.realpath(PubBCRPredictor.__file__))
+import PubBCRp
+project_path = os.path.dirname(os.path.realpath(PubBCRp.__file__))
 
 import torch
 import torch.nn as nn
@@ -32,7 +32,7 @@ class MLP(nn.Module):
         out = self.fc3(out)
         return out
 
-class PubBCRPredictor_Runner():
+class PubBCRp_Runner():
     def __init__(self,model):
         """
         Initialize public antibody prediction model.
@@ -45,16 +45,16 @@ class PubBCRPredictor_Runner():
         self.model = model
         if self.model=='cdrh':
             self.path_model = os.path.join(project_path,'model/prediction/cdrh','publich_p10_n1_10M_mlp_model.pth')
-            self.PubBCRPredictor = torch.load(self.path_model, map_location=torch.device('cpu'))
+            self.PubBCRp = torch.load(self.path_model, map_location=torch.device('cpu'))
         elif self.model=='cdrh3':
             self.path_model = os.path.join(project_path,'model/prediction/cdrh3','publiccdr3h_p10_n1_10M_mlp_model.pth')
-            self.PubBCRPredictor = torch.load(self.path_model, map_location=torch.device('cpu'))
+            self.PubBCRp = torch.load(self.path_model, map_location=torch.device('cpu'))
         elif self.model=='cdrl':
             self.path_model = os.path.join(project_path,'model/prediction/cdrl','publiccdrl_p5reg_n1_10M_mlp_model.pth')
-            self.PubBCRPredictor = torch.load(self.path_model, map_location=torch.device('cpu'))        
+            self.PubBCRp = torch.load(self.path_model, map_location=torch.device('cpu'))        
         elif self.model=='cdrl3':
             self.path_model = os.path.join(project_path,'model/prediction/cdrl3','publiccdr3l_p5reg_n1_10M_mlp_model.pth')
-            self.PubBCRPredictor = torch.load(self.path_model, map_location=torch.device('cpu'))
+            self.PubBCRp = torch.load(self.path_model, map_location=torch.device('cpu'))
 
     def predict(self, feature):
         """
@@ -68,10 +68,10 @@ class PubBCRPredictor_Runner():
         """
         with torch.no_grad():
             if self.model=='cdrh' or self.model=='cdrh3': 
-                outputs = self.PubBCRPredictor(torch.tensor(feature, dtype=torch.float32))
+                outputs = self.PubBCRp(torch.tensor(feature, dtype=torch.float32))
                 return torch.sigmoid(outputs)
             elif self.model=='cdrl' or self.model=='cdrl3':
-                outputs = self.PubBCRPredictor(torch.tensor(feature, dtype=torch.float32))
+                outputs = self.PubBCRp(torch.tensor(feature, dtype=torch.float32))
                 return outputs
     
     def plot_metric(self,input_labels,input_probs):

@@ -20,14 +20,14 @@ long_description = read_file(long_description_file)
 install_requires = [x.strip() for x in all_reqs if 'git+' not in x]
 
 setup(
-    name='PubBCRPredictor',  
+    name='PubBCRp',  
     version='1.0.0',  
     author='Qihang Xu, Jian Zhang',  
-    description='PubBCRPredictor, the public antibody prediction module leverages the pre-trained BCR-V-BERT model to classify heavy chain antibodies (binary classification) and predict light chain antibodies (regression).', 
+    description='PubBCRp, the public antibody prediction module leverages the pre-trained BCR-V-BERT model to classify heavy chain antibodies (binary classification) and predict light chain antibodies (regression).', 
     long_description=long_description, 
     long_description_content_type='text/markdown', 
     author_email='jian_zhang@tju.edu.cn',  
-    url='https://github.com/ZhangLabTJU/PubBCRPredictor',  
+    url='https://github.com/ZhangLabTJU/PubBCRp',  
     license='CC BY-NC-SA 4.0',
     include_package_data=True, 
     packages=find_packages(),  
