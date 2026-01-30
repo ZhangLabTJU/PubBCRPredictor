@@ -24,7 +24,7 @@ conda activate public-env
 
 To use PubBCRp, install via github:
 ```bash
-git clone https://user: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@github.com/ZhangLabTJU/PubBCRPredictor.git
+git clone https://github.com/ZhangLabTJU/PubBCRPredictor.git
 cd PubBCRp
 pip install -r requirements.txt
 python setup.py install
