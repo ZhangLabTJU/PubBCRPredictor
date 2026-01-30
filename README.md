@@ -1,4 +1,4 @@
-# PubBCRPredictor
+# PubBCRp
 
 ## Overview
 The public antibody prediction module leverages the pre-trained **BCR-V-BERT** model to classify heavy chain antibodies (binary classification) and predict light chain antibodies (regression). This feature allows for the identification of public antibodies using advanced transformer-based sequence analysis.
@@ -22,10 +22,10 @@ conda create --name public-env python=3.9
 conda activate public-env
 ```
 
-To use PubBCRPredictor, install via github:
+To use PubBCRp, install via github:
 ```bash
-git clone https://user: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@github.com/ZhangLabTJU/PubBCRPredictor.git
-cd PubBCRPredictor
+git clone https://user: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@github.com/ZhangLabTJU/PubBCRp.git
+cd PubBCRp
 pip install -r requirements.txt
 python setup.py install
 ```
@@ -73,11 +73,11 @@ predict_public_antibody <- function(data, model = "cdrh", python_env = "r-py-env
 
 ```python
 
-from PubBCRPredictor import PubBCRPredictor_Runner, MLP
+from PubBCRp import PubBCRp_Runner, MLP
 from BCR_V_BERT import BCR_V_BERT_Runner
 
 BCR_V_BERT = BCR_V_BERT_Runner(model='cdrh')
-public_runner = PubBCRPredictor_Runner(model='cdrh')
+public_runner = PubBCRp_Runner(model='cdrh')
 prob = public_runner.predict(feature)
 public_runner.plot_metric(data['label'].values,prob.numpy())
 
@@ -91,7 +91,7 @@ prob = public_runner.predict(feature)
 ```
 
 ### Testing All Models
-If you want to test all models, please refer to the [example notebook](https://github.com/ZhangLabTJU/PubBCRPredictor/blob/main/example/example.ipynb).
+If you want to test all models, please refer to the [example notebook](https://github.com/ZhangLabTJU/PubBCRp/blob/main/example/example.ipynb).
 
 ***Sample Data***
 Sample datasets for testing the public antibody prediction module are available in the example_paired folder. These datasets include required columns such as cdr1, cdr2, cdr3, and v_gene for both heavy and light chain antibodies.
